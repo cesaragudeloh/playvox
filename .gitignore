@@ -1,0 +1,86 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@cesaragudeloh 
+cesaragudeloh
+/
+TestAppGate
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+TestAppGate/.gitignore
+
+César Augusto Agudelo Holguín Se adiciona el README
+Latest commit f306f14 12 days ago
+ History
+ 0 contributors
+44 lines (37 sloc)  444 Bytes
+   
+# Eclipse
+.classpath
+.project
+.settings/
+.log
+ 
+# Intellij
+*/.idea/*
+.idea/*
+*/.idea
+*/history/
+*/target/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+/target/*
+/bin/*
+
+# Gradle
+*/.gradle/*
+.gradle/*
+*/.gradle
+*/build/
+build/
+*/out/*
+*.bin
+*.lock
+#ignore los .exe
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+#ignorar carpeta build
+*/build/*
+*/.metadata/
+
+#ignorar los .sonar
+.sonarlint
+
+*/logs/*
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete
