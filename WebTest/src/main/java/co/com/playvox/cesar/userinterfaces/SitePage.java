@@ -11,4 +11,5 @@ public class SitePage {
     public static final Target PHONE_NUMBER_INPUT = Target.the("Phone Number Input").locatedBy("//form/div/input[@type='tel']");
     public static final Target CHECK_AGREE = Target.the("Check I agree terms").locatedBy("//span[text()='I agree to the terms and conditions']");
     public static final Target PAY_NOW_BUTTON = Target.the("Pay now button").locatedBy("//button[text()='Pay now']");
+    public static final Target ALERT_TERMS_AND_CONDITIONS = Target.the("Alert terms and conditions").locatedBy("//section[@role='body']");
 }
