@@ -1,6 +1,7 @@
 package co.com.playvox.cesar.stepdefinitions;
 
 import co.com.playvox.cesar.models.LoginModel;
+import co.com.playvox.cesar.models.ReservationModel;
 import co.com.playvox.cesar.tasks.Login;
 import co.com.playvox.cesar.tasks.Make;
 import io.cucumber.java.Before;
@@ -29,10 +30,21 @@ public class BookATripToSpaceRunnerStep {
 
 
     @DataTableType
-    public LoginModel responseEntry(Map<String, String> entry) {
+    public LoginModel loginEntry(Map<String, String> entry) {
         return new LoginModel(
                 entry.get("username"),
                 entry.get("password")
+        );
+    }
+
+
+    @DataTableType
+    public ReservationModel ReservationEntry(Map<String, String> entry) {
+        return new ReservationModel(
+                entry.get("name"),
+                entry.get("emailAddress"),
+                entry.get("socialSecurityNumber"),
+                entry.get("phoneNumber")
         );
     }
 
@@ -51,11 +63,12 @@ public class BookATripToSpaceRunnerStep {
 
 
     @When("he enters the data to buy the ticket to travel to space")
-    public void heEntersTheDataToBuyTheTicketToTravelToSpace() {
-      user.attemptsTo(
-              Make.theReservation()
-      );
+    public void heEntersTheDataToBuyTheTicketToTravelToSpace(ReservationModel reservation) {
+        user.attemptsTo(
+                Make.theReservation(reservation)
+        );
     }
+
 
 
     @Then("ticket purchase is successful")
